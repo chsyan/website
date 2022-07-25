@@ -4,14 +4,9 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        cursor: "cursor .6s linear infinite alternate",
-        type: "type 4s infinite alternate both",
+        type: "type 6s infinite",
       },
       keyframes: {
-        cursor: {
-          "0%, 40%": { opacity: 1 },
-          "60%, 100%": { opacity: 0 },
-        },
         type: {
           "0%, 20%": { transform: "translateX(0ch)" },
           "22%, 24%": { transform: "translateX(1ch)" },
@@ -29,7 +24,21 @@ module.exports = {
           "70%, 72%": { transform: "translateX(13ch)" },
           "74%, 76%": { transform: "translateX(14ch)" },
           "78%, 80%": { transform: "translateX(15ch)" },
-          "100%": { transform: "translateX(15ch)" },
+          "%, %": { transform: "translateX(14ch)" },
+          "%, %": { transform: "translateX(13ch)" },
+          "%, %": { transform: "translateX(12ch)" },
+          "%, %": { transform: "translateX(11ch)" },
+          "%, %": { transform: "translateX(10ch)" },
+          "%, %": { transform: "translateX(9ch)" },
+          "%, %": { transform: "translateX(8ch)" },
+          "%, %": { transform: "translateX(7ch)" },
+          "%, %": { transform: "translateX(6ch)" },
+          "%, %": { transform: "translateX(5ch)" },
+          "%, %": { transform: "translateX(4ch)" },
+          "%, %": { transform: "translateX(3ch)" },
+          "%, %": { transform: "translateX(2ch)" },
+          "%, %": { transform: "translateX(1ch)" },
+          "100%": { transform: "translateX(0ch)" },
         },
       },
     },

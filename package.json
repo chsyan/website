@@ -17,5 +17,8 @@
     "eslint-plugin-astro": "^0.15.0",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.1.2"
+  },
+  "dependencies": {
+    "astro-icon": "^0.7.3"
   }
 }

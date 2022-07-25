@@ -1,17 +1,41 @@
 ---
+import Icon from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Charles">
-  <div class="flex flex-col justify-center h-screen">
+<Layout>
+  <div class="h-screen">
     <h1 class="text-4xl text-center">
+      <div class="p-16"></div>
       <span class="relative">
         Hi, I&apos;m Charles
         <span
-          class="after:content-[''] [font-family:monospace] after:block after:absolute after:w-2 after:h-full
-after:bg-gray-100 after:animate-cursor absolute left-0 inline-block w-full bg-gray-800 -bottom-0 -top-1 animate-type"
-        ></span>
+          class="after:block after:absolute after:w-1 after:h-full
+after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0 animate-type"></span>
       </span>
     </h1>
+    <div class="grid place-items-center">
+      <div id="chevron" class="visible">
+        <Icon class="absolute bottom-0 animate-bounce" name="ic:round-keyboard-double-arrow-down" />
+      </div>
+    </div>
   </div>
+  <div class="h-screen"></div>
 </Layout>
+
+<script>
+  let chevron = document.getElementById("chevron");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY < 300) {
+      chevron.className = "visible"
+    } else {
+      chevron.className = "invisible"
+    }
+  });
+</script>
+
+<style lang="css">
+  [astro-icon="ic:round-keyboard-double-arrow-down"] {
+    width: 64px;
+  }
+</style>
