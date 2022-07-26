@@ -5,12 +5,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <div class="h-screen">
-    <h1 class="text-4xl text-center">
-      <div class="p-16"></div>
+    <h1 class="text-6xl text-center overflow-x-hidden">
+      <div class="p-32"></div>
       <span class="relative">
         Hi, I&apos;m Charles
-        <span
-          class="after:block after:absolute after:w-1 after:h-full
+        <span class="after:block after:absolute after:w-1 after:h-full
 after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0 animate-type"></span>
       </span>
     </h1>
@@ -19,11 +18,29 @@ after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0
         <Icon class="absolute bottom-0 animate-bounce" name="ic:round-keyboard-double-arrow-down" />
       </div>
     </div>
+    <div class="p-4"></div>
+    <h2 class="text-center px-64 text-xl">
+      I&apos;m a 3rd year student at the <a href="https://www.ubc.ca/">University of British Columbia</a> studying
+      towards a Bachelor of Science majoring in <a
+        href="https://phas.ubc.ca/undergrad-combined-honours-physics-and-computing-science">Combined Honours in Computer
+        Science and Physics</a>
+    </h2>
+    <p>
+      Welcome to my little corner of the internet! This site is mostly for personal use, a document for me to look back
+      on and keep track of what I&apos;ve done.
+    </p>
+    <p>
+      I like to swim, bike, and run (triathlons). Here's some of my stats:
+    </p>
+    <ul class="list-disc">
+      <li> <a href="https://www.sportstats.ca/search-results.xhtml?query=charles%20yan">Sport Stats</a></li>
+      <li> <a href="https://www.swimming.ca/en/swimmer/4700341/">Swimming Canada</a> </li>
+    </ul>
   </div>
   <div class="h-screen"></div>
 </Layout>
 
-<script>
+<script is:inline>
   let chevron = document.getElementById("chevron");
   window.addEventListener("scroll", function () {
     if (window.scrollY < 300) {
