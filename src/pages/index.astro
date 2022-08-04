@@ -1,9 +1,23 @@
 ---
 import Icon from "astro-icon";
 import Layout from "../layouts/Layout.astro";
+import SocialIcon from "../components/SocialIcon.astro";
 ---
 
 <Layout>
+  <div class="fixed bottom-0 p-4">
+    <ul>
+      <li>
+        <SocialIcon name="ri:linkedin-line" href="https://www.linkedin.com/in/charles-yan/" />
+      </li>
+      <li>
+        <SocialIcon name="ri:github-line" href="https://github.com/chsyan" />
+      </li>
+      <li>
+        <SocialIcon name="ri:mail-line" href="mailto:charles5850@gmail.com" />
+      </li>
+    </ul>
+  </div>
   <div class="h-screen">
     <h1 class="text-6xl text-center overflow-x-hidden">
       <div class="p-32"></div>
@@ -13,9 +27,10 @@ import Layout from "../layouts/Layout.astro";
 after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0 animate-type"></span>
       </span>
     </h1>
-    <div class="grid place-items-center">
-      <div id="chevron" class="visible">
-        <Icon class="absolute bottom-0 animate-bounce" name="ic:round-keyboard-double-arrow-down" />
+    <div id="chevron" class="visible">
+      <div class="grid place-items-center">
+        <Icon class="grid place-items-center w-16 absolute bottom-0 animate-bounce"
+          name="ic:round-keyboard-double-arrow-down" />
       </div>
     </div>
     <div class="p-4"></div>
@@ -55,8 +70,4 @@ after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0
 
 <style lang="css">
   @import "../styles/global.css";
-
-  [astro-icon="ic:round-keyboard-double-arrow-down"] {
-    width: 64px;
-  }
 </style>

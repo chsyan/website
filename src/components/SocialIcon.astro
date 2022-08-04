@@ -1,0 +1,13 @@
+---
+import Icon from "astro-icon";
+
+export interface Props {
+  name: string;
+  href: string;
+}
+const { name, href } = Astro.props;
+---
+
+<a id="icon-link" href={href} target="_blank">
+  <Icon class="w-8 py-4 hover:text-blue-500 transition transform hover:-translate-y-1" name={name} />
+</a>

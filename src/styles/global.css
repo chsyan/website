@@ -5,3 +5,11 @@
 a {
   @apply text-blue-500;
 }
+
+body {
+  @apply text-gray-200;
+}
+
+#icon-link {
+  @apply text-gray-200;
+}
