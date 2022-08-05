@@ -5,8 +5,8 @@ import SocialIcon from "../components/SocialIcon.astro";
 ---
 
 <Layout>
-  <div class="fixed bottom-0 p-4">
-    <ul>
+  <div class="fixed bottom-0 md:block">
+    <ul class="hidden">
       <li>
         <SocialIcon name="ri:linkedin-line" href="https://www.linkedin.com/in/charles-yan/" />
       </li>
@@ -18,10 +18,10 @@ import SocialIcon from "../components/SocialIcon.astro";
       </li>
     </ul>
   </div>
-  <div class="h-screen">
-    <h1 class="text-6xl text-center overflow-x-hidden">
-      <div class="p-32"></div>
-      <span class="relative">
+  <div class="h-screen w-full">
+    <div class="p-32"></div>
+    <h1 class="overflow-hidden text-center text-4xl">
+      <span class="relative md:text-6xl">
         Hi, I&apos;m Charles
         <span class="after:block after:absolute after:w-1 after:h-full
 after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0 animate-type"></span>
@@ -34,7 +34,7 @@ after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0
       </div>
     </div>
     <div class="p-4"></div>
-    <h2 class="text-center px-64 text-xl">
+    <h2 class="text-center text-xl md:text-8xl animate-fade-in-down">
       I&apos;m a 3rd year student at the <a href="https://www.ubc.ca/">University of British Columbia</a> studying
       towards a Bachelor of Science majoring in <a
         href="https://phas.ubc.ca/undergrad-combined-honours-physics-and-computing-science">Combined Honours in Computer
@@ -61,9 +61,9 @@ after:bg-gray-100 absolute left-0 inline-block w-full bg-gray-800 bottom-0 top-0
   let chevron = document.getElementById("chevron");
   window.addEventListener("scroll", function () {
     if (window.scrollY < 300) {
-      chevron.className = "visible"
+      chevron.className = ""
     } else {
-      chevron.className = "invisible"
+      chevron.className = "hidden"
     }
   });
 </script>

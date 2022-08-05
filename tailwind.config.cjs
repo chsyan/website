@@ -5,8 +5,19 @@ module.exports = {
     extend: {
       animation: {
         type: "type 4s infinite",
+        "fade-in-down": "fade-in-down 0.5s ease-in-out",
       },
       keyframes: {
+        "fade-in-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
         type: {
           "0%, 10%": { transform: "translateX(0ch)" },
           "12%, 14%": { transform: "translateX(1ch)" },
